@@ -3,9 +3,9 @@ XamlAnimatedGif
 
 [![Build status](https://ci.appveyor.com/api/projects/status/huf6heqkc2hvu7qd?svg=true)](https://ci.appveyor.com/project/thomaslevesque/xamlanimatedgif)
 
-A library to display animated GIF images in XAML apps (WPF, Windows 8.1, Windows Phone 8.1, Universal Windows Platform).
+A library to display animated GIF images in XAML apps (WPF, Silverlight 5, Windows 8.1, Windows Phone 8.1, Universal Windows Platform).
 
-A NuGet package is available here: [XamlAnimatedGif 1.0.0-alpha5](http://www.nuget.org/packages/XamlAnimatedGif/1.0.0-alpha5)
+A NuGet package is available here: [XamlAnimatedGif](http://www.nuget.org/packages/XamlAnimatedGif)
 
 **Basic usage:**
 
@@ -22,7 +22,7 @@ This is a reboot of my [WpfAnimatedGif](https://github.com/thomaslevesque/WpfAni
 
 - Support for all recent XAML platforms, not just WPF
 
-  The WpfAnimatedGif library relied heavily on WPF-specific imaging features, which made it pretty much impossible to adapt to other platforms. XamlAnimatedGif, on the other hand, implements its own GIF decoding (metadata parsing and LZW decompression), which works on any XAML platform, and has as little dependency as possible on platform-specific types. The library currently works on WPF (.NET 4.x), Windows 8.1 Windows Phone 8.1 and Universal Windows Platform (Windows 10).
+  The WpfAnimatedGif library relied heavily on WPF-specific imaging features, which made it pretty much impossible to adapt to other platforms. XamlAnimatedGif, on the other hand, implements its own GIF decoding (metadata parsing and LZW decompression), which works on any XAML platform, and has as little dependency as possible on platform-specific types. The library currently works on WPF (.NET 4.x), Silverlight 5, Windows 8.1, Windows Phone 8.1 and Universal Windows Platform (Windows 10).
 
 - Resource efficiency
 
@@ -54,11 +54,11 @@ Supported platforms
 |Windows Phone (SL 8.1) |  | Maybe |
 |Windows Phone (8.0) |  | Maybe |
 |Universal Windows Platform (Windows 10) | :white_check_mark: |  |
-|Silverlight         |  | No idea |
+|Silverlight (5.0)   | :white_check_mark: |  |
 |Xamarin.iOS         |  | No idea |
 |Xamarin.Android     |  | No idea |
 
-As you can see, there aren't many supported platforms yet. So far, I only focused on making it work, and didn't worry too much about platform support. I don't want to spend time supporting older platforms (SL, Win 8.0, WP 8.0), and haven't looked into Xamarin yet for iOS and Android, but I'll be glad to accept contributions.
+As you can see, there are still a few unsupported platforms. So far, I only focused on making it work, and didn't worry too much about platform support. I don't want to spend time supporting older platforms (Win 8.0, WP 8.0), and haven't looked into Xamarin yet for iOS and Android, but I'll be glad to accept contributions.
 
 GIF Features
 --------
@@ -85,7 +85,6 @@ How to contribute
 
 There are a few things that I would like to include in the library, but I don't have the time or will to do it myself, so I'd be glad to accept contributions:
 - support for Windows 8.0 and Windows Phone 8.0
-- support for Silverlight (is anyone still using Silverlight out there?)
 - support for iOS and Android via Xamarin (is it even possible? I haven't played with Xamarin yet, so I'm not sure). I don't even know if it would be useful; perhaps these platforms already have some support for animated GIFs. If not the implementation would probably be quite different, but the basic blocks (GiF decoding and decompression) could probably be reused.
 
 Before you start working on something, please create an issue to discuss it and make sure we're on the same page regarding how it should be done.
